@@ -1,0 +1,21 @@
+body{padding:20px;min-width:588px !important;}
+
+/*page-pager*/
+.page-pager{padding:10px 0;font-size:0;margin:0 0 20px 0;}
+.page-pager-left{display:inline-block;float:left;width:24%;box-sizing:border-box;line-height:31px;
+	font-size:12px;text-align:left;padding:0 0 0 3px;overflow:hidden;
+}
+.page-pager-left{box-sizing:border-box;line-height:25px;height:25px;}
+.page-pager-left .pager-current{padding:0 3px 0 0;}
+.page-pager-left .pager-every{padding:0 3px}
+.page-pager-left .pager-totalcount{padding:0 3px}
+.page-pager-right{text-align:right;display:inline-block;float:right;width:75%;box-sizing:border-box;line-height:31px;padding:0 3px 0 0;}
+.page-pager-right a{margin:0 2px;padding:3px 13px;box-sizing:border-box;line-height:25px;height:25px;cursor:pointer;border:1px solid #ddd;font-size:12px;}
+.page-pager-right span{margin:0 2px;padding:3px 13px;box-sizing:border-box;line-height:25px;height:25px;cursor:pointer;border:1px solid #ddd;font-size:12px;}
+.page-pager-right a:hover{background:#f2f8ff;}
+.page-pager-right span:hover{background:#f2f8ff;}
+.page-pager-right span.page-goto{border:none;border:0;padding:3px 6px 3px 10px;}
+.pager-selector-selected{border:none !important;border:0 !important;color:red !important;pointer-events:none !important;}
+.page-number-list{display:inline-block;box-sizing:border-box;line-height:23px;height:23px;border:1px solid #ddd;padding:0 10px;}
+.page-pager-right cite{box-sizing:border-box;line-height:25px;height:25px;padding:0 3px 0 10px;}
+.page-pager-right .pager-disable{pointer-events:none !important;background:#eee;}
