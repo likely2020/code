@@ -1,0 +1,10 @@
+/*template*/
+#banner{width:1080px;height:285px;position:relative;overflow:hidden;}
+#banner ul{position:absolute;top:0px;left:0px;}
+#banner ul li{width:1080px;height:285px;float:left;}
+#banner ul li img{width:1080px;height:284px;}
+#banner ol{position:absolute;bottom:0px;right:8px;z-index:4;}
+#banner ol li{float:left;padding:0 5px;font-size:23px;color:#999;cursor:pointer;}
+#banner span{z-index:3;position:absolute;bottom:0;left:0;width:1080px;height:25px;background-color:#333;opacity:0.3;filter:alpha(opacity=30);}
+#banner strong{position:absolute;left:10px;bottom:3px;color:#fff;font-size:12px;z-index:4;}
+.banner_active{color:#e4393c !important;}
