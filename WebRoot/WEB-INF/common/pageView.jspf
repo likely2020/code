@@ -1,0 +1,37 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<div class="page-pager">
+	<div class="page-pager-left">
+		<span class="pager-current"><span class="red">${currentPage}</span>/${pageCount}</span>
+		<span class="pager-every">每页:${pageSize }条</span>
+		<span class="pager-totalcount">总记录数:${recordCount }条</span>
+	</div>
+	<div class="page-pager-right">
+		
+		<a href="javascript: gotoPage(1)" class="${currentPage==1?'pager-disable':''}" style="cursor:hand;">首页</a>
+		
+		<s:iterator begin="%{beginPageIndex}" end="%{endPageIndex}" var="num">
+			<s:if test="#num == currentPage"> <%-- 当前页 --%>
+				<span class="pager-selector-num pager-selector-selected">${num}</span>
+			</s:if>
+			<s:else> <%-- 非当前页 --%>
+				<span class="pager-selector-num" style="cursor: hand;" onClick="gotoPage(${num});">${num}</span>
+			</s:else>
+			
+		</s:iterator>
+		
+		<a href="javascript: gotoPage(${pageCount})" class="${currentPage==pageCount?'pager-disable':''}" style="cursor: hand;">末页</a>
+		
+		<span class="page-goto">转到</span>
+		<select onchange="gotoPage(this.value)" class="page-number-list">
+			<s:iterator begin="1" end="%{pageCount}" var="num">
+				<option value="${num}" ${currentPage==num?'selected':''}>${num}</option>
+			</s:iterator>
+		</select>
+		<script type="text/javascript">
+			$("#_pn").val("${currentPage}");
+		</script>
+		
+	</div>
+</div>

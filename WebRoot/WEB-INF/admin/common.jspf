@@ -1,0 +1,15 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+<!-- 
+<meta http-equiv="pragma" content="no-cache">  
+<meta http-equiv="cache-control" content="no-cache">  
+<meta http-equiv="expires" content="0">    
+ -->
+<link href="${pageContext.request.contextPath}/style/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/style/fonts/font-awesome.min.css" type="text/css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/style/css/base.css" type="text/css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/style/css/form.css" type="text/css" rel="stylesheet" />
+
+<script src="${pageContext.request.contextPath}/style/js/jquery-1.8.2.min.js" type="application/javascript" charset="UTF-8"></script>
+<script src="${pageContext.request.contextPath}/style/plugin/layer/layer.js" type="application/javascript" charset="UTF-8"></script>
+<script src="${pageContext.request.contextPath}/style/js/common.js" type="application/javascript" charset="UTF-8"></script>
