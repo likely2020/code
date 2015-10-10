@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 配置为开发模式 -->
+    <constant name="struts.devMode" value="true" />
+    <!-- 把扩展名配置为action -->
+    <constant name="struts.action.extension" value="action" />
+    <!-- 把主题配置为simple -->
+    <constant name="struts.ui.theme" value="simple" />
+    <!-- 解决乱码    -->
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	
+    <package name="default" namespace="/" extends="struts-default">
+    
+	<!-- 全局的Result配置 -->
+	<global-results>
+		<result name="loginUI">/WEB-INF/login.jsp</result>
+		<result name="noPrivilege">/WEB-INF/noPrivilege.jsp</result>
+		<result name="unknow">/WEB-INF/error.jsp</result>
+	</global-results>
+	
+	<!-- 全局异常配置 -->
+	<global-exception-mappings>
+		<exception-mapping result="null" exception="java.lang.NullPointerException" ></exception-mapping>
+		<exception-mapping result="unknow" exception="java.lang.Exception" ></exception-mapping>
+	</global-exception-mappings>
+      
+	<!-- 当Struts2与Spring整合后，class属性可以写bean的名称 -->
+	<!-- message -->
+	<action name="message_*" class="messageAction" method="{1}">
+		<result name="success">/WEB-INF/admin/message/success.jsp</result>
+	</action>
+	<!-- upload -->
+	<action name="upload_*" class="uploadAction" method="{1}">
+		<!-- ************* -->
+	</action>
+	<!-- home -->
+	<action name="home_*" class="homeAction" method="{1}">
+		<result name="header">/WEB-INF/admin/home/header.jsp</result>
+		<result name="nav">/WEB-INF/admin/home/nav.jsp</result>
+		<result name="index">/WEB-INF/admin/home/index.jsp</result>
+	</action>
+	<!-- webSettings -->
+	<action name="webSettings_*" class="webSettingsAction" method="{1}">
+		<result name="saveUI">/WEB-INF/admin/web_settings/saveUI.jsp</result>
+		<result name="success" type="redirectAction">message_success</result>
+	</action>
+	<!-- category -->
+	<action name="category_*" class="categoryAction" method="{1}">
+		<result name="list">/WEB-INF/admin/category/list.jsp</result>
+		<result name="saveUI">/WEB-INF/admin/category/saveUI.jsp</result>
+		<result name="toList" type="redirectAction">category_list</result>
+	</action>
+	<!-- article -->
+	<action name="article_*" class="articleAction" method="{1}">
+		<result name="list">/WEB-INF/admin/article/list.jsp</result>
+		<result name="saveUI">/WEB-INF/admin/article/saveUI.jsp</result>
+		<result name="toList" type="redirectAction">article_list</result>
+	</action>
+	<!-- videoCategory -->
+	<action name="videoCategory_*" class="videoCategoryAction" method="{1}">
+		<result name="list">/WEB-INF/admin/videoCategory/list.jsp</result>
+		<result name="saveUI">/WEB-INF/admin/videoCategory/saveUI.jsp</result>
+		<result name="toList" type="redirectAction">videoCategory_list</result>
+	</action>
+	<!-- video -->
+	<action name="video_*" class="videoAction" method="{1}">
+		<result name="list">/WEB-INF/admin/video/list.jsp</result>
+		<result name="saveUI">/WEB-INF/admin/video/saveUI.jsp</result>
+		<result name="toList" type="redirectAction">video_list</result>
+	</action>
+	<!-- friends -->
+	<action name="friends_*" class="friendsAction" method="{1}">
+		<result name="list">/WEB-INF/admin/friends/list.jsp</result>
+		<result name="saveUI">/WEB-INF/admin/friends/saveUI.jsp</result>
+		<result name="toList" type="redirectAction">friends_list</result>
+	</action>
+	<!-- front --><!-- front --><!-- front --><!-- front --><!-- front -->
+	<action name="page_*" class="pageIndexAction" method="{1}">
+		<result name="header">/WEB-INF/front/header.jsp</result>
+		<result name="footer">/WEB-INF/front/footer.jsp</result>
+		<result name="index" >/WEB-INF/front/index.jsp</result>
+	</action>
+    </package>
+
+    <!-- Add packages here -->
+
+</struts>
