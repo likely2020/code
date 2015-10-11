@@ -12,6 +12,7 @@
 <script type="text/javascript">
     window.onload=function(){
         moveStart(document.getElementById('banner'),1080);
+        document.title = $(".header .header-left>h1.hide").text();
     }
 </script>
 </head>

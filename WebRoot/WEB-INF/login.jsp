@@ -17,6 +17,7 @@ function toLogin(){
 	$.post("${pageContext.request.contextPath}/user_toLogin.action",{userName:login.userName,passWord:login.passWord},function(data){
 		if(data.match(/success/g)){
 			layer.msg('登录成功',{icon: 6});
+			window.location.href="${pageContext.request.contextPath}/home_index.action";
 		}else{
 			layer.msg('用户名或密码错误',{icon: 7});
 		}

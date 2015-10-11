@@ -55,6 +55,19 @@ function deleteImages(obj){
 		}
 	});
 }
+$(function(){
+	$("#form1_category_id option").each(function(){
+		if($(this).text()=="教学视频")$(this).remove();
+		if($(this).text()=="联系我们"){
+			if($("#form1").attr("action").match(/article_add/g)){
+				$(this).remove();
+			}
+			else{
+				$("#form1_category_id").attr("disabled","true");
+			}	
+		}
+	});
+});
 </script>
 </head>
 <body>
@@ -95,11 +108,17 @@ function deleteImages(obj){
 	    </div>
 
 	    <div class="form-toolbar">
-	        <a href="javascript:void(0)" onclick="formSubmit('form1')">保存</a><s:a action="article_list">取消</s:a><a href="javascript:void(0)" onclick="clickUpload()">上传图片</a>
+	        <a href="javascript:void(0)" onclick="submitBefore()">保存</a><s:a action="article_list">取消</s:a><a href="javascript:void(0)" onclick="clickUpload()">上传图片</a>
 	    </div>
     </s:form>
     <!-- 隐藏的上传控件 -->
 	<input type="file" class="hide" onchange="Upload()" name="file" id="file" accept="image/*"  value=""  />
 </div>
 </body>
+<script type="text/javascript">
+	function submitBefore(){
+		$("#form1_category_id").removeAttr("disabled");
+		formSubmit('form1');
+	}
+</script>
 </html>

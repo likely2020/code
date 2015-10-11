@@ -20,6 +20,7 @@
 				}
 			});
 		}
+		document.title = $(".header .header-left>h1.hide").text();
 	});
 </script>
 </head>

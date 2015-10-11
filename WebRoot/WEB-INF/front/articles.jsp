@@ -25,7 +25,7 @@
 		$(".article-list .row-text").each(function(){
 			$(this).html(removeHTMLTag($(this).html()));
 		});
-		
+		document.title = $(".header .header-left>h1.hide").text();
 	});
 </script>
 </head>
