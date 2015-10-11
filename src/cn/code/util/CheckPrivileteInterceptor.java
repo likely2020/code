@@ -28,7 +28,7 @@ public class CheckPrivileteInterceptor extends AbstractInterceptor {
 				return "loginUI";
 			}
 		}
-		// 如果已登 录，就判断权限
+		// 如果已登录，就判断权限
 		else {
 			if (user.hasPrivilegeByUrl(privUrl)) {
 				// 如果有权限，就放行

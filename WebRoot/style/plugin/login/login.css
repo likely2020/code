@@ -1,0 +1,16 @@
+*{margin:0;padding:0;list-style:none;text-decoration:none;font-style:normal;}        
+#txx-login{width:358px;height:238px;border:6px solid #eee;position:fixed;z-index:8888;background:#fff;}
+#txx-login div.title{background:#e04343;position:relative;}
+#txx-login div.title span{line-height:30px;display:inline-block;color:#fff;
+    font-size:13px;font-weight:bold;padding:0 0 0 8px;
+}
+#txx-login div.title a.login-close{position:absolute;right:5px;color:#fff;font-size:18px;cursor:pointer;}
+#txx-login div.content{padding:30px 10px 10px 10px ;}
+#txx-login div.content dl{color:#498cd0;font-size:0;line-height:23px;height:23px;margin:0 0 18px 0;}
+#txx-login div.content dl dt{width:31%;text-align:right;float:left;line-height:23px;font-size:12px;color:#666;}
+#txx-login div.content dl dd{width:61%;float:left;line-height:23px;}
+#txx-login div.content dl dd input{box-sizing: border-box;height:23px;padding:3px 3px;border:1px solid #d5e5f5;width:166px;}
+#txx-login div.operation{height:45px;line-height:45px;text-align:center;}
+#txx-login div.operation a{padding:5px 21px;background:#e04343;margin:0 5px;font-size:12px;color:#fff;}
+
+#txx-login-mark{background:black;filter:alpha(opacity=30); -moz-opacity:0.3; -khtml-opacity: 0.3;opacity: 0.3; position:fixed; left:0; top:0; z-index:8887;}

@@ -19,7 +19,6 @@ public class Category {
 	private String name;
 	private String img;
 	private Integer position = 1;
-	private String url;
 	private Set<Article> articles = new HashSet<Article>();
 
 	@Id
@@ -64,14 +63,6 @@ public class Category {
 
 	public void setImg(String img) {
 		this.img = img;
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
 	}
 
 }

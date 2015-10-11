@@ -74,3 +74,13 @@ function clearPre(obj){
 	
 	return obj;
 }
+
+function removeHTMLTag(str) {
+    str = str.replace(/<\/?[^>]*>/g,''); //去除HTML tag
+    str = str.replace(/[ | ]*\n/g,'\n'); 
+    str = str.replace(/&lt;p&gt;/g,''); 
+    str = str.replace(/&amp;ldquo;/g,'');
+    str = str.replace(/&amp;rdquo;/g,'');
+    str = str.replace(/&lt;\/p&gt;/g,'');
+    return str;
+}
