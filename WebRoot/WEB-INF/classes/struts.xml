@@ -15,6 +15,16 @@
 	
     <package name="default" namespace="/" extends="struts-default">
     
+    <interceptors>
+    	<!-- 声明拦截器 -->
+    	<interceptor name="checkPrivilege" class="cn.code.util.CheckPrivileteInterceptor"></interceptor>
+    	<!-- 重新定义拦截器栈 -->
+    	<interceptor-stack name="defaultStack">
+    		<interceptor-ref name="checkPrivilege"></interceptor-ref>
+    		<interceptor-ref name="defaultStack"></interceptor-ref>
+    	</interceptor-stack>
+    </interceptors>
+    
 	<!-- 全局的Result配置 -->
 	<global-results>
 		<result name="loginUI">/WEB-INF/login.jsp</result>
@@ -78,11 +88,26 @@
 		<result name="saveUI">/WEB-INF/admin/friends/saveUI.jsp</result>
 		<result name="toList" type="redirectAction">friends_list</result>
 	</action>
+	<!-- users -->
+	<action name="user_*" class="userAction" method="{1}">
+		<result name="list">/WEB-INF/admin/user/list.jsp</result>
+		<result name="saveUI">/WEB-INF/admin/user/saveUI.jsp</result>
+		<result name="toList" type="redirectAction">user_list</result>
+	</action>
 	<!-- front --><!-- front --><!-- front --><!-- front --><!-- front -->
 	<action name="page_*" class="pageIndexAction" method="{1}">
 		<result name="header">/WEB-INF/front/header.jsp</result>
 		<result name="footer">/WEB-INF/front/footer.jsp</result>
 		<result name="index" >/WEB-INF/front/index.jsp</result>
+		<result name="leftNav" >/WEB-INF/front/leftNav.jsp</result>
+		<result name="articles" >/WEB-INF/front/articles.jsp</result>
+		<result name="article" >/WEB-INF/front/article.jsp</result>
+		<result name="video" >/WEB-INF/front/video.jsp</result>
+		<result name="contactus" >/WEB-INF/front/contactus.jsp</result>
+		<result name="toIndex" type="redirectAction">page_index</result>
+		<result name="toVideo" type="redirectAction">page_video</result>
+		<result name="toContactUS" type="redirectAction">page_contactus</result>
+		
 	</action>
     </package>
 

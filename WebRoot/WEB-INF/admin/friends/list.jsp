@@ -44,7 +44,7 @@
 	<!--分页信息-->
     <%@ include file="/WEB-INF/common/pageView.jspf" %>
 </div>
-<s:form action="videoCategory_list" id="listForm">
+<s:form action="friends_list" id="listForm">
 	<s:hidden name="pageNum" value="1"></s:hidden>
 </s:form>
 

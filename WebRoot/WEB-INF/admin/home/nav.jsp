@@ -4,6 +4,7 @@
     <h6>导航菜单<i class="fa fa-angle-double-down"></i></h6>
     <dl>
         <dt><i class="fa fa-th"></i>基础设置</dt>
+        <dd><i class="fa fa-list"></i><a href="${pageContext.request.contextPath}/user_list.action" target="pageContent">用户管理</a></dd>
         <dd><i class="fa fa-list"></i><a href="${pageContext.request.contextPath}/webSettings_editUI.action" target="pageContent">网站设置</a></dd>
     </dl>
     <dl>

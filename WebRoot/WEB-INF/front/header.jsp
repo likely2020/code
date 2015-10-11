@@ -2,11 +2,19 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="/struts-tags" prefix="s" %>
+<script type="text/javascript">
+    function search(obj){
+    	var searchText = $(".header-right .content-wrap>input[type='text']").val();
+    	if(!searchText)return false;
+    	
+        window.location.href="${pageContext.request.contextPath}/page_articles.action?searchText="+searchText;
+    };
+</script>
 <div class="header">
     <div class="container">
         <div class="header-left">
-            <h1 class="hide">Company Name</h1>
-            <img src="images/logo.png" title="Company Name" />
+            <h1 class="hide">${companyInfo.webName}</h1>
+            <img src="${pageContext.request.contextPath}/upload/${companyInfo.webLogo}" title="${companyInfo.webName}" />
         </div>
         <div class="header-right">
             <div class="content-wrap">
@@ -22,7 +30,17 @@
         <ul>
         	<li><s:a action="page_index" cssClass="active">首页</s:a></li>
            	<s:iterator value="#categoryList">
-           		<li><s:a action="%{url}">${name}</s:a></li>
+	           	<c:choose>
+					<c:when test="${name=='教学视频'}">
+						<li _id="${id}"><s:a action="page_video?id=%{id}">${name}</s:a></li>
+					</c:when>
+					<c:when test="${name=='联系我们'}">
+					 	<li _id="${id}"><s:a action="page_contactus?id=%{id}">${name}</s:a></li>
+					</c:when>
+					<c:otherwise>
+						<li _id="${id}"><s:a action="page_articles?id=%{id}">${name}</s:a></li>
+					</c:otherwise>
+				</c:choose>
 	    	</s:iterator>
         </ul>
     </div>

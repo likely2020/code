@@ -5,10 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>异常</title>
-
 </head>
 <body>
-<s:property value="exception.message"></s:property>
-<a href="javascript:void(0)" onclick="window.history.back()">返回</a>
+<a href="javascript:void(0)" onclick="window.history.back()">产生错误，请联系管理员it2020@yeah.net，点击返回</a>
 </body>
 </html>
