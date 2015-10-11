@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 @Entity
@@ -83,6 +84,7 @@ public class Article {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "article")
+	@OrderBy("id ASC")
 	public Set<ArticleImage> getArticleImages() {
 		return articleImages;
 	}

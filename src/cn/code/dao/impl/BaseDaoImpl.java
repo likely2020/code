@@ -94,7 +94,6 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
 
 		// 参数列表
 		List<Object> parameters = queryHelper.getParameters();
-
 		// 查询本页的数据列表
 		Query listQuery = getSession().createQuery(queryHelper.getListQueryHql()); // 创建查询对象
 		if (parameters != null) { // 设置参数

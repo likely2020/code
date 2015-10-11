@@ -17,7 +17,6 @@
 	    		<th class="hide">id</th>
 	    		<th style="width:20%;">类目名称</th>
 	    		<th style="width:20%;">顶部类目图</th>
-	    		<th style="width:20%;">url</th>
 	    		<th style="width:15%;">位置</th>
 	    		<th style="width:20%;">操作</th>
 	    	</tr>
@@ -28,7 +27,6 @@
 	    			<td class="hide">${id}</td>
 	    			<td>${name}</td>
 	    			<td class="table-img"><img src="${pageContext.request.contextPath}/upload/${img}" /></td>
-	    			<td>${url}</td>
 	    			<td>${position}</td>
 	    			<td class="operate"><s:a action="category_editUI?id=%{id}"><i class="fa fa-edit"></i>编辑</s:a><s:a action="category_delete?id=%{id}" onClick="return isSure(this,'该操作将级联删除其下所有文章，确定要删除吗？')"><i class="fa fa-remove"></i>删除</s:a></td>
 	    		</tr>

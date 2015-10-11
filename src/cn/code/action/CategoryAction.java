@@ -39,7 +39,6 @@ public class CategoryAction extends BaseAction<Category> {
 		Category category = new Category();
 		category.setName(model.getName());
 		category.setPosition(model.getPosition());
-		category.setUrl(model.getUrl());
 		if (imageId != null) {
 			Temp temp = tempService.getById(imageId);
 			category.setImg(temp.getName());
@@ -60,7 +59,6 @@ public class CategoryAction extends BaseAction<Category> {
 		Category category = categoryService.getById(model.getId());
 		category.setName(model.getName());
 		category.setImg(model.getImg());
-		category.setUrl(model.getUrl());
 		category.setPosition(model.getPosition());
 		categoryService.update(category);
 
