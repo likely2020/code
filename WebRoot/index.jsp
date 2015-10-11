@@ -3,10 +3,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>管理后台</title>
+    <title></title>
 	<script type="text/javascript">
 		window.onload=function(){
-			window.location.href="${pageContext.request.contextPath}/home_index.action";
+			window.location.href="${pageContext.request.contextPath}/page_index.action";
 		}
 	</script>
   </head>

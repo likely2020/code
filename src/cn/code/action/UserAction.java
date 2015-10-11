@@ -67,6 +67,7 @@ public class UserAction extends BaseAction<User> {
 	}
 
 	public String loginUI() {
+		ActionContext.getContext().getSession().remove("user");
 		return "loginUI";
 	}
 
@@ -79,5 +80,10 @@ public class UserAction extends BaseAction<User> {
 			write("error");
 		}
 		return NONE;
+	}
+
+	public String loginOut() {
+		ActionContext.getContext().getSession().remove("user");
+		return "loginUI";
 	}
 }

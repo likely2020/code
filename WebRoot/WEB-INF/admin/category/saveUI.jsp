@@ -50,10 +50,7 @@ function Upload() {
 	<s:form id="form1" action="category_%{ id == null ? 'add' : 'edit' }" autocomplete="off">
 		<s:hidden name="id"></s:hidden>
 	    <div class="form-item">
-	        <label>类目名称：</label><s:textfield type="text" cssClass="long required" name="name" /><i class="red">*</i>
-	    </div>
-	    <div class="form-item">
-	        <label>Url：</label><s:textfield type="text" cssClass="long required" name="url" /><i class="red">*</i>
+	        <label>类目名称：</label><s:textfield type="text"  readOnly="true" cssClass="long required" name="name" /><i class="red">*</i>
 	    </div>
 	    <div class="form-item">
 	        <label>排序：</label><s:textfield type="number" cssClass="short" name="position" onkeyup="mustNumber(this)" />

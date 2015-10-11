@@ -15,6 +15,16 @@
 	
     <package name="default" namespace="/" extends="struts-default">
     
+    <interceptors>
+    	<!-- 声明拦截器 -->
+    	<interceptor name="checkPrivilege" class="cn.code.util.CheckPrivileteInterceptor"></interceptor>
+    	<!-- 重新定义拦截器栈 -->
+    	<interceptor-stack name="defaultStack">
+    		<interceptor-ref name="checkPrivilege"></interceptor-ref>
+    		<interceptor-ref name="defaultStack"></interceptor-ref>
+    	</interceptor-stack>
+    </interceptors>
+    
 	<!-- 全局的Result配置 -->
 	<global-results>
 		<result name="loginUI">/WEB-INF/login.jsp</result>
@@ -82,7 +92,6 @@
 	<action name="user_*" class="userAction" method="{1}">
 		<result name="list">/WEB-INF/admin/user/list.jsp</result>
 		<result name="saveUI">/WEB-INF/admin/user/saveUI.jsp</result>
-		<result name="loginUI">/WEB-INF/admin/user/login.jsp</result>
 		<result name="toList" type="redirectAction">user_list</result>
 	</action>
 	<!-- front --><!-- front --><!-- front --><!-- front --><!-- front -->

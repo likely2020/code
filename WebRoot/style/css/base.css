@@ -20,6 +20,7 @@ ul{list-style:none;}
 .customer-disable{pointer-events:none;background:#f7f7f7;}
 .main-header{background:#fff;height:50px;border: 1px solid #E7E7E7;position:fixed;width:100%;top:0;left:0;z-index:8888;color:#e67e22;}
 .main-header .header-title{font-size:16px;padding-left:18px;}
+.main-header .login-out{line-height:50px;}
 .main-content{margin-top:61px;}
 /*left*/
 .main-left{height:100%;overflow: hidden;padding:10px;}
